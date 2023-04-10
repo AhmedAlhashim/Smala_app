@@ -48,21 +48,21 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                 icon: SvgPicture.asset(
                   'images/dumbbell.svg',
                   height: 32,
-                  color: widget.index == 1 ? selectedColor : unselectedColor,
+                  color: widget.index == 0 ? selectedColor : unselectedColor,
                 ),
                 label: "Training"),
             NavigationDestination(
                 icon: SvgPicture.asset(
                   'images/nutrition.svg',
                   height: 23,
-                  color: widget.index == 2 ? selectedColor : unselectedColor,
+                  color: widget.index == 1 ? selectedColor : unselectedColor,
                 ),
                 label: "Nutrition"),
             NavigationDestination(
                 icon: SvgPicture.asset(
                   'images/home.svg',
                   height: 30,
-                  color: widget.index == 0 ? selectedColor : unselectedColor,
+                  color: widget.index == 2 ? selectedColor : unselectedColor,
                 ),
                 label: "Home"),
             NavigationDestination(
