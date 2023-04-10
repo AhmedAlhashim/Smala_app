@@ -70,8 +70,7 @@ class _DailyChallengeState extends State<DailyChallenge> {
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(theme_green),
-                  padding: MaterialStateProperty.all<EdgeInsets>(
-                      EdgeInsets.fromLTRB(20, 0, 20, 0)),
+    
                 ),
                 child: Text("DONE",
                     style: textStyle.copyWith(
