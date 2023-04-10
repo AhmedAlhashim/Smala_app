@@ -44,6 +44,8 @@ class _AppState extends State<App> {
     Community(),
     Chatting(),
     Profile(),
+    QRcode(),
+    Notifications(),
   ];
 
   void changePage(int index) {
@@ -59,7 +61,7 @@ class _AppState extends State<App> {
           color: primary_color,
           child: SafeArea(
             child: Scaffold(
-              appBar: CustomAppBar(),
+              appBar: CustomAppBar(notifyParent: changePage),
               body: screens[_currentIndex],
               bottomNavigationBar: CustomNavigationBar(
                 notifyParent: changePage,

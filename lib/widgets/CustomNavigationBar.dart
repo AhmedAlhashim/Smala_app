@@ -41,7 +41,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         child: NavigationBar(
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
           height: 60,
-          selectedIndex: widget.index,
+          selectedIndex: widget.index < 5 ? widget.index : 0,
           onDestinationSelected: (index) => widget.notifyParent(index),
           destinations: [
             NavigationDestination(
@@ -79,13 +79,13 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                   color: widget.index == 4 ? selectedColor : unselectedColor,
                 ),
                 label: "Chatting"),
-            NavigationDestination(
-                icon: SvgPicture.asset(
-                  'images/profile.svg',
-                  height: 20,
-                  color: widget.index == 5 ? selectedColor : unselectedColor,
-                ),
-                label: "Profile")
+            // NavigationDestination(
+            //     icon: SvgPicture.asset(
+            //       'images/profile.svg',
+            //       height: 20,
+            //       color: widget.index == 5 ? selectedColor : unselectedColor,
+            //     ),
+            //     label: "Profile")
           ],
         ),
       ),
