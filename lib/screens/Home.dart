@@ -9,6 +9,7 @@ import 'package:samla_app/widgets/MainButtons.dart';
 
 import '../widgets/CustomAppBar.dart';
 import '../widgets/CustomNavigationBar.dart';
+import '../widgets/WeeklyProgress.dart';
 import 'Chatting.dart';
 import 'Community.dart';
 import 'Nutrition.dart';
@@ -23,6 +24,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool dailyChallengeStatus = true;
+
+  void deactivateDailyChallengeStatus() {
+    setState(() {
+      dailyChallengeStatus = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,11 +40,9 @@ class _HomeState extends State<Home> {
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         clipBehavior: Clip.none,
-
         child: Wrap(
-          direction: Axis.horizontal,
-          runSpacing: 25,
-          children: [
+          
+          direction: Axis.horizontal, runSpacing: 25, children: [
           //  circular indicators
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,8 +61,15 @@ class _HomeState extends State<Home> {
               )
             ],
           ),
-          //  daily challenge
-          DailyChallenge()
+          //  check if there adaily challenge
+          if (dailyChallengeStatus)
+            DailyChallenge(
+              challengeName: 'RUNNING',
+              challengeProgress: '2 Times  |  45 Min',
+              challengeImage: 'images/runner.svg',
+              statusUpdate: deactivateDailyChallengeStatus,
+            ),
+         WeeklyProgress()
         ]),
       ),
     );
