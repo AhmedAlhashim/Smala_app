@@ -43,7 +43,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 SizedBox(width: 10),
                 Text('Kermit bin Frog',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
                         fontSize: 17,
                         decoration: TextDecoration.none,
                         color: theme_darkblue.withOpacity(0.7))),

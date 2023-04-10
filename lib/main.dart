@@ -18,13 +18,14 @@ import 'widgets/MainButtons.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor:
-        primary_color,
-    statusBarColor: primary_color, 
-       statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
-    statusBarBrightness: Brightness.dark,
-    systemNavigationBarIconBrightness: Brightness.dark /// navigation bar color
-  ));
+      systemNavigationBarColor: primary_color,
+      statusBarColor: primary_color,
+      statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+      statusBarBrightness: Brightness.dark,
+      systemNavigationBarIconBrightness: Brightness.dark
+
+      /// navigation bar color
+      ));
   runApp(App());
 }
 
@@ -36,11 +37,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  int _currentIndex = 0;
+  int _currentIndex = 2;
   final screens = [
-    Home(),
     Training(),
     Nutrition(),
+    Home(),
     Community(),
     Chatting(),
     Profile(),
